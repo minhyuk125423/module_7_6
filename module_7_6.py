@@ -10,7 +10,7 @@ def personal_sum(numbers):
             count += 1
         except TypeError:
             incorrect_data += 1
-            print(f'숫자 데이터가 아닙니다 - {i}')
+            print(f'문자열입니다 - {i}')
     return (result, incorrect_data, count)
 
 def calculate_average(numbers):
@@ -23,7 +23,7 @@ def calculate_average(numbers):
     except ZeroDivisionError:
         return 0
 
-print(f'결과 1: {calculate_average("1, 2, 3")}') # 각 문자는 1개의 길이를 가진 문자열로 취급됩니다
+print(f'결과 1: {calculate_average("1, 2, 3")}') # 각 문자는 1개의 길이를 가진 문자열로 취급됩니다( , = 하나의 문자열)
 print(f'결과 2: {calculate_average([1, "줄", 3, "다른 줄"])}') # 1과 3만 계산됩니다
 print(f'결과 3: {calculate_average(567)}') # 데이터가 수신되지 않았습니다
 print(f'결과 4: {calculate_average([42, 15, 36, 13])}') # 정상 작동 되야 합니다
